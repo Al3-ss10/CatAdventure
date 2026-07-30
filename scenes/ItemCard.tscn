@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1rlgadol3ucx"]
+
+[ext_resource type="Script" uid="uid://drdxretlqygns" path="res://scripts/ItemCard.gd" id="1_wavvb"]
+
+[node name="ItemCard" type="PanelContainer"]
+custom_minimum_size = Vector2(130, 150)
+script = ExtResource("1_wavvb")
+
+[node name="RarityBar" type="ColorRect" parent="."]
+layout_mode = 2
+color = Color(0.6, 0.6, 0.6, 1)
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="IconRect" type="TextureRect" parent="VBox"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+expand_mode = 1
+stretch_mode = 6
+
+[node name="NameLabel" type="Label" parent="VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 12
+text = "Item"
+autowrap_mode = 2
+
+[node name="PriceRow" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="CoinIcon" type="Label" parent="VBox/PriceRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "🪙"
+
+[node name="PriceLabel" type="Label" parent="VBox/PriceRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.78, 0.26, 1)
+theme_override_font_sizes/font_size = 13
+text = "0"
